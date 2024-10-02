@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('bg Color.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: underline;
+    color: #0b3636;
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    animation: slideInFromTop 1s ease-out;
+}
+
+.upper {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 1rem;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 3rem;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: growBox 1.2s ease-in-out;
+}
+
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    animation: fadeInText 1s ease-in-out 0.5s forwards;
+}
+
+h2 {
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 2rem;
+    animation: slideInFromBottom 1s ease-out 0.8s forwards;
+}
+
+#guessvalue {
+    font-size: 15px;
+    padding: 1rem;
+    border-radius: 14px;
+    margin-top: 2rem;
+    animation: bounceIn 0.8s ease-in-out;
+}
+
+.btn {
+    background-color: #03a78b;
+    color: #fff;
+    font-size: 16px;
+    padding: 7px 12px;
+    margin: 2px 5px;
+    border-radius: 14px;
+    border: 1px solid #0b3636;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.btn:hover {
+    background-color: #0b3636;
+    transform: translateY(-3px) scale(1.05);
+}
+
+#hint {
+    margin-top: 1rem;
+    text-decoration: underline;
+    font-weight: 800;
+    font-size: 1.6rem;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes growBox {
+    from {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1200px) {
+    .upper {
+        width: 60%;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .upper {
+        width: 80%;
+        padding: 1rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    #guessvalue {
+        width: 90%;
+        padding: 0.8rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .upper {
+        width: 95%;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+    }
+
+    #guessvalue {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
